@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html lang = "en">
 <head>
-    <title>Index</title>
+    
 </head>
 <!--the body of the webpage-->
 <body style="background-color:lightgray;" text="Black"  align="center">
