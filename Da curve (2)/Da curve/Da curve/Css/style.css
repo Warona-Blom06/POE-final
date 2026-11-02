@@ -1,0 +1,560 @@
+/*
+   Da Curve — style.css
+   Fashion brand: formal elegance meets street fashion.
+*/
+
+/* Google Fonts: an elegant display serif for headings, a clean
+   geometric sans for body copy, and a bold condensed display face
+   for the street-style marquee heading. */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Jost:wght@300;400;500;600&family=Bebas+Neue&display=swap');
+
+
+/* ============================================================
+   COLOUR PALETTE & BASE VARIABLES
+   ============================================================ */
+
+:root {
+    --color-bg: #f5f1e9;
+    --color-black: #141414;
+    --color-charcoal: #2b2b2b;
+    --color-gold: #b08d3e;
+    --color-gold-light: #d9c08a;
+    --color-cream: #f5f1e9;
+
+    --overlay-dark: rgba(20, 20, 20, 0.55);
+
+    --shadow-soft: rgba(20, 20, 20, 0.25);
+
+    --font-heading: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    --font-body: 'Jost', 'Segoe UI', Arial, Helvetica, sans-serif;
+    --font-display: 'Bebas Neue', 'Jost', Arial, sans-serif;
+}
+
+
+/* ============================================================
+   GENERAL RESET & BASE STYLE
+   ============================================================ */
+
+* {
+    box-sizing: border-box;
+
+    margin: 0;
+
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+
+    background-color: var(--color-bg);
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    color: var(--color-black);
+
+    font-family: var(--font-body);
+
+    line-height: 1.7;
+
+    text-align: center;
+}
+
+
+/* ============================================================
+   TYPOGRAPHY
+   ============================================================ */
+
+h1,
+h4 {
+    font-family: var(--font-heading);
+
+    color: var(--color-black);
+
+    letter-spacing: 1px;
+
+    margin-top: 1.5rem;
+
+    margin-bottom: 1rem;
+}
+
+/* h2/h3 carry long-form paragraph copy on these pages (mission
+   statement, brand story), so they're set in the body typeface
+   for readability rather than the display serif. */
+
+h2,
+h3 {
+    font-family: var(--font-body);
+
+    font-weight: 300;
+
+    color: var(--color-charcoal);
+
+    line-height: 1.8;
+
+    margin-top: 1.5rem;
+
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2.6rem;
+
+    font-weight: 700;
+
+    font-style: italic;
+}
+
+h2 {
+    font-size: 1.05rem;
+
+    max-width: 60rem;
+
+    margin-left: auto;
+
+    margin-right: auto;
+}
+
+h3 {
+    font-size: 1rem;
+
+    max-width: 55rem;
+
+    margin-left: auto;
+
+    margin-right: auto;
+}
+
+h4 {
+    font-size: 1.1rem;
+
+    font-weight: 600;
+}
+
+i {
+    font-style: italic;
+}
+
+
+/* ============================================================
+   LAYOUT STRUCTURE
+   ============================================================ */
+
+header {
+    padding: 1.5rem 1rem 0.5rem;
+}
+
+main {
+    width: 90%;
+
+    max-width: 75rem;
+
+    margin: 2rem auto;
+
+    padding: 2rem;
+
+    background-color: rgba(255, 255, 255, 0.55);
+
+    border: 1px solid var(--color-gold-light);
+
+    border-radius: 0.5rem;
+
+    box-shadow: 0 0.6rem 2rem var(--shadow-soft);
+}
+
+footer {
+    padding: 1.5rem 1rem;
+
+    margin-top: 2.5rem;
+
+    background-color: var(--color-black);
+
+    color: var(--color-gold-light);
+
+    font-size: 0.85rem;
+
+    letter-spacing: 1px;
+}
+
+
+/* NAVIGATION */
+
+nav {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 0.25rem;
+
+    padding: 1rem;
+}
+
+nav a {
+    display: inline-block;
+
+    color: var(--color-black);
+
+    text-decoration: none;
+
+    font-family: var(--font-body);
+
+    font-weight: 500;
+
+    font-size: 0.9rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    padding: 0.5rem 0.9rem;
+
+    border-bottom: 2px solid transparent;
+
+    transition:
+        color 0.25s ease,
+        border-color 0.25s ease;
+}
+
+nav a:hover,
+nav a:focus {
+    color: var(--color-gold);
+
+    border-bottom-color: var(--color-gold);
+}
+
+nav a:active {
+    color: var(--color-charcoal);
+}
+
+
+/* LINKS (general) */
+
+a {
+    color: var(--color-gold);
+
+    transition: color 0.2s ease;
+}
+
+a:hover,
+a:focus {
+    color: var(--color-charcoal);
+}
+
+
+/* 
+   IMAGES & VIDEO
+   Responsive by default: an image/video never exceeds its
+   container. Fine-tuning per page is below. */
+
+img {
+    max-width: 100%;
+
+    height: auto;
+}
+
+video {
+    height: 400px;
+
+    width: 400px;
+
+    margin: 1.5rem auto;
+
+    border: 2px solid var(--color-black);
+
+    box-shadow: 0 0.4rem 1.2rem var(--shadow-soft);
+}
+
+
+/* INDEX PAGE — Mission & Vision */
+
+body.page-index {
+    background-color: var(--color-cream);
+}
+
+body.page-index main img {
+    width: 25rem;
+
+    max-width: 90%;
+
+    height: auto;
+
+    border-radius: 0.4rem;
+
+    box-shadow: 0 0.4rem 1.2rem var(--shadow-soft);
+
+    margin-bottom: 1.5rem;
+}
+
+body.page-index h1 {
+    border-bottom: 2px solid var(--color-gold);
+
+    display: inline-block;
+
+    padding-bottom: 0.4rem;
+}
+
+
+/* HOME PAGE — Hero video */
+
+body.page-home {
+    background-image:
+        linear-gradient(var(--overlay-dark), var(--overlay-dark)),
+        url('images/OIP.WEBP');
+
+    color: var(--color-cream);
+}
+
+body.page-home h1 {
+    color: var(--color-cream);
+
+    text-shadow: 0 0.15rem 0.6rem rgba(0, 0, 0, 0.6);
+}
+
+body.page-home nav a {
+    color: var(--color-cream);
+}
+
+body.page-home nav a:hover,
+body.page-home nav a:focus {
+    color: var(--color-gold-light);
+
+    border-bottom-color: var(--color-gold-light);
+}
+
+body.page-home main {
+    background-color: rgba(20, 20, 20, 0.35);
+
+    border-color: rgba(217, 192, 138, 0.4);
+}
+
+body.page-home video {
+    width: 100%;
+
+    max-width: 50rem;
+
+    height: auto;
+
+    border-color: var(--color-gold-light);
+}
+
+
+/* ABOUT US PAGE */
+
+body.page-about {
+    background-image:
+        linear-gradient(var(--overlay-dark), var(--overlay-dark)),
+        url('images/background.webp');
+
+    color: var(--color-cream);
+}
+
+body.page-about h1 {
+    color: var(--color-cream);
+
+    text-shadow: 0 0.15rem 0.6rem rgba(0, 0, 0, 0.6);
+}
+
+body.page-about nav a {
+    color: var(--color-cream);
+}
+
+body.page-about nav a:hover,
+body.page-about nav a:focus {
+    color: var(--color-gold-light);
+
+    border-bottom-color: var(--color-gold-light);
+}
+
+body.page-about main {
+    background-color: rgba(20, 20, 20, 0.55);
+
+    border-color: rgba(217, 192, 138, 0.4);
+}
+
+body.page-about h2 {
+    color: var(--color-cream);
+
+    text-align: left;
+}
+
+
+/* PRODUCTS & SERVICES PAGE — Gallery grid + marquee heading */
+
+body.page-products {
+    background-color: beige;
+}
+
+body.page-products main {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Marquee-style moving heading (moved out of inline <style>) */
+
+.moving-text {
+    font-family: var(--font-display);
+
+    font-size: 2.2rem;
+
+    letter-spacing: 3px;
+
+    position: relative;
+
+    white-space: nowrap;
+
+    color: var(--color-gold);
+
+    animation: moveAcross 8s linear infinite alternate;
+}
+
+@keyframes moveAcross {
+    0% {
+        transform: translateX(-40vw);
+    }
+
+    100% {
+        transform: translateX(40vw);
+    }
+}
+
+/* Product photo grid: multi-column on larger screens,
+   single column on smaller screens (see media query below) */
+
+.product-gallery {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 1.25rem;
+
+    max-width: 62.5rem;
+
+    margin: 2rem auto 0;
+}
+
+.product-gallery img {
+    width: 100%;
+
+    height: 11.25rem;
+
+    object-fit: cover;
+
+    border: 2px solid var(--color-black);
+
+    border-radius: 0.3rem;
+
+    box-shadow: 0 0.3rem 1rem var(--shadow-soft);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.product-gallery img:hover {
+    transform: scale(1.04);
+
+    box-shadow: 0 0 1rem var(--color-gold);
+}
+
+
+/* CONTACT PAGE */
+
+body.page-contact {
+    background-color: azure;
+}
+
+body.page-contact main {
+    max-width: 40rem;
+}
+
+body.page-contact h4 {
+    color: var(--color-charcoal);
+
+    margin: 0.5rem 0;
+}
+
+
+/* TABLET / MOBILE — 768px breakpoint */
+
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: 1.9rem;
+    }
+
+    h2,
+    h3 {
+        font-size: 1rem;
+
+        max-width: 90%;
+    }
+
+    main {
+        width: 95%;
+
+        padding: 1.25rem;
+    }
+
+    nav {
+        flex-direction: column;
+
+        gap: 0;
+    }
+
+    nav a {
+        padding: 0.6rem;
+    }
+
+    body.page-home video {
+        height: auto;
+    }
+
+    body.page-index main img {
+        width: 100%;
+
+        max-width: 20rem;
+    }
+
+    .product-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .product-gallery img {
+        height: 9rem;
+    }
+}
+
+
+/* SMALL PHONES — 480px breakpoint */
+
+@media (max-width: 480px) {
+
+    body {
+        background-attachment: scroll;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    footer {
+        font-size: 0.75rem;
+    }
+
+    .product-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .product-gallery img {
+        height: auto;
+
+        aspect-ratio: 4 / 3;
+    }
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" href="Css/style.css">
+</head>
+<!--the body of the webpage-->
+<body style="background-image: url('images/OIP.WEBP');" text="Black"  align="center">
+<header>
+<!--the navigation tags-->    
+<nav>
+<a href="index.html">Index|</a>
+<a href="home.html">Home|</a>
+<a href="Products and services.html">Products and services|</a>
+<a href="about_us.html">About us|</a>
+<a href="Contact.html">Contact|</a>
+</nav>
+</header>
+<main>
+<h1><u><i>Welcome to Da Curve</i></u></h1>
+<h3></h3>
+<!--Video of the products that Da curve sells-->
+<video height="700px" width="100%" autoplay muted playslinline
+         style="display: block; margin: 0 auto;">
+<source src="images/visuals.mp4" type="video/mp4">
+</video>
+</main>
+<footer>&copy; ST10515104<p id="datetime"></p>
+    </footer>
+    <script>
+        // date and time update on the footer 
+        function updateDateTime(){
+            const now = new Date();
+            const options = {
+                weekday:'long',
+                year:'numeric',
+                month:'long',
+                day:'numeric',
+                hour:'2-digit',
+                minute:'2-digit',
+                second:'2-digit'
+            };
+            document.getElementById('datetime').textContent = now.toLocalDateString('en-US', options);
+        }
+        //update date time immediatley
+        updateDateTime();
+        setInterval(updateDateTime, 1000);
+        </script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Contact us</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    
+    <!--Navigation bar-->
+    <header>
+        <nav class="navbar">
+            <a href="home.html" class="logo">MyWebsite</a>
+
+            <ul class="nav-links">
+<li><a href="one.html">Index</a></li>
+
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about_us.html">About us</a></li>
+            <li><a href="Products and services.html">Services</a></li>
+            <li><a href="testing1/Images/tww.html">Gallery</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--home section-->
+    <section id="home" class="hero">
+       <h1>Welcome to Our Website</h1>
+       <p>We would love to hear from you. Send us a message!</p>
+       <a href="Contact.html" class="hero-button">Contact Us</a>
+    </section>
+
+    <!-- About section -->
+    <section id="home" class="hero">
+     <h2>About Us</h2>
+     <p>
+        We provide quality services and value our customers. 
+        Complete the ontact form below and our team will 
+        get back to you.
+     </p>
+    </section>
+
+    <!-- Contact form -->
+    <section id="contact" class="contact-section">
+       <div class="form-container">
+         <h2>Contact Form</h2>
+         <p>Complete all fields marked with an asterisk (*).</p>
+
+         <form id="contactForm">
+            <label for="name">Full Name</label>
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="enter your full name"
+                minlength="2"
+                maxlength="80"
+                pattern="[A-Za-zA-O0-o0-y ./-]*"
+                autocomplete="name"
+                required>
+
+            <label for="email">Email Address *</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="example@email.com"
+                maxlength="254"
+                autocomplete="email"
+                required>
+
+            <label for="phone">Phone Number *</label>
+            <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="+27 81 488 6640"
+                pattern="[+]?[0-9 ()-]{9,20}"
+                minlength="9"
+                maxlength="20"
+                autocomplete="tel"
+                required>
+            
+            <label for="subject">Subject *</label>
+            <select id="subject" name="subject" required>
+                <option value="">Select a subject</option>
+                <option value="General Enquiry">General Enquiry</option>
+                <option value="Support">Support</option>
+                <option value="Feedback">Feedback</option>
+                <option value="Other">Other</option>
+            </select>
+            
+            <label for="message">Message *</label>
+            <textarea
+                id="message"
+                name="message"
+                rows="5"
+                minlength="10"
+                maxlength="2000"
+                placeholder="Write your message here...."
+                required></textarea>
+
+
+         </form>
+       </div>
+
+    </section>
+</body>
+</html>

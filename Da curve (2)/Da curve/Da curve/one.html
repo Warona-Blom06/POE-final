@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content=" ">
+    <meta name="keywords" content=" ">
+    <meta name="author" content="Warona Blom ">
+    <title>Contact us</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    
+    <!--Navigation bar-->
+    <header>
+        <nav class="navbar">
+            <a href="home.html" class="logo">MyWebsite</a>
+
+            <ul class="nav-links">
+<li><a href="one.html">Index</a></li>
+
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about_us.html">About us</a></li>
+            <li><a href="Products and services.html">Services</a></li>
+            <li><a href="testing1/Images/tww.html">Gallery</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--home section-->
+    <section id="home" class="hero">
+       <h1>Welcome to Our Website</h1>
+       <p>We would love to hear from you. Send us a message!</p>
+       <a href="Contact.html" class="hero-button">Contact Us</a>
+    </section>
+
+    <!-- About section -->
+    <section id="home" class="hero">
+     <h2>About Us</h2>
+     <p>
+        We provide quality services and value our customers. 
+        Complete the ontact form below and our team will 
+        get back to you.
+     </p>
+    </section>
+
+    <!-- Contact form -->
+    <section id="contact" class="contact-section">
+       <div class="form-container">
+         <h2>Contact Form</h2>
+         <p>Complete all fields marked with an asterisk (*).</p>
+
+         <form id="contactForm">
+            <label for="name">Full Name</label>
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="enter your full name"
+                minlength="2"
+                maxlength="80"
+                pattern="[A-Za-zA-O0-o0-y ./-]*"
+                autocomplete="name"
+                required>
+
+            <label for="email">Email Address *</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="example@email.com"
+                maxlength="254"
+                autocomplete="email"
+                required>
+
+            <label for="phone">Phone Number *</label>
+            <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="+27 81 488 6640"
+                pattern="[+]?[0-9 ()-]{9,20}"
+                minlength="9"
+                maxlength="20"
+                autocomplete="tel"
+                required>
+            
+            <label for="subject">Subject *</label>
+            <select id="subject" name="subject" required>
+                <option value="">Select a subject</option>
+                <option value="General Enquiry">General Enquiry</option>
+                <option value="Support">Support</option>
+                <option value="Feedback">Feedback</option>
+                <option value="Other">Other</option>
+            </select>
+            
+            <label for="message">Message *</label>
+            <textarea
+                id="message"
+                name="message"
+                rows="5"
+                minlength="10"
+                maxlength="2000"
+                placeholder="Write your message here...."
+                required></textarea>
+
+            <button type="submit" id="submitBtn">
+                Send Message
+            </button>
+
+            <p id="formStatus" role="status" araia-live="polite"></p>
+         </form>
+       </div>
+    </section>
+
+    <!-- Map section -->
+    <section id="location" class="location-section">
+    <h2>Find Our Location </h2>
+    <p>Visit us in Johannesburg, South Africa.</p>
+
+    <iframe
+     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3580.1224437082037!2d28.0339324!3d-26.1926949!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950c1bb2ad5483%3A0xffc2ed86c651c235!2sBraamfontein%20Centre%2C%2023%20Jorissen%20St%2C%20Braamfontein%2C%20Johannesburg%2C%202017!5e0!3m2!1sen!2sza!4v1793396080409!5m2!1sen!2sza"
+     width="600" 
+     height="450" 
+     style="border:0;" 
+     allowfullscreen="" 
+     loading="lazy" 
+     referrerpolicy="strict-origin-when-cross-origin">
+    ></iframe>
+    </section>
+
+    <!--footer-->
+    <footer>
+        <p>&copy; 2026 MyWebsite.  All rights reserved.</p>
+        <p id="datetime"></p>
+    </footer>
+    <script>
+        // date and time update on the footer 
+        function updateDateTime(){
+            const now = new Date();
+            const options = {
+                weekday:'long',
+                year:'numeric',
+                month:'long',
+                day:'numeric',
+                hour:'2-digit',
+                minute:'2-digit',
+                second:'2-digit'
+            };
+            document.getElementById('datetime').textContent = now.toLocalDateString('en-US', options);
+        }
+        //update date time immediatley
+        updateDateTime();
+        setInterval(updateDateTime, 1000);
+    </script>
+
+</body>
+</html>
